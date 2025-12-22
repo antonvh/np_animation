@@ -204,10 +204,10 @@ class TestRGBHSLConversion:
         for r, g, b in test_colors_rgb:
             hsl_val = rgb_to_hsl(r, g, b)
             r2, g2, b2 = hsl_to_rgb(*hsl_val)
-            # Allow tolerance due to rounding (up to 5 for edge cases)
-            assert abs(r - r2) <= 5, f"Red mismatch: {r} -> {r2}"
-            assert abs(g - g2) <= 5, f"Green mismatch: {g} -> {g2}"
-            assert abs(b - b2) <= 5, f"Blue mismatch: {b} -> {b2}"
+            # Allow small tolerance due to rounding
+            assert abs(r - r2) <= 4, f"Red mismatch: {r} -> {r2}"
+            assert abs(g - g2) <= 4, f"Green mismatch: {g} -> {g2}"
+            assert abs(b - b2) <= 4, f"Blue mismatch: {b} -> {b2}"
 
 
 class TestGRBEnum:

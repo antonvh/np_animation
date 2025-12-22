@@ -38,15 +38,17 @@ def hsl_to_rgb(h, s, l):
     Returns:
         tuple: (r,g,b) in range 0-255
     """
-    h /= 359
-    s /= 100
-    l /= 100
+    # Use explicit float division for better precision
+    h = h / 359.0
+    s = s / 100.0
+    l = l / 100.0
     r, g, b = __hue_to_rgb(h)
     c = (1.0 - abs(2.0 * l - 1.0)) * s
     r = (r - 0.5) * c + l
     g = (g - 0.5) * c + l
     b = (b - 0.5) * c + l
-    rgb = tuple([round(x * 255) for x in (r, g, b)])
+    # Clamp and round to prevent out-of-range values
+    rgb = tuple([max(0, min(255, round(x * 255))) for x in (r, g, b)])
     return rgb
 
 
@@ -61,27 +63,33 @@ def rgb_to_hsl(r, g, b):
     Returns:
         tuple: (h,s,l) with h in range 0-359, s & l in range 0-100
     """
-    r = float(r / 255)
-    g = float(g / 255)
-    b = float(b / 255)
+    # Use explicit float division for better precision
+    r = r / 255.0
+    g = g / 255.0
+    b = b / 255.0
     high = max(r, g, b)
     low = min(r, g, b)
-    h, s, l = ((high + low) / 2,) * 3
+    h, s, l = ((high + low) / 2.0,) * 3
 
     if high == low:
         h = 0.0
         s = 0.0
     else:
         d = high - low
-        s = d / (2 - high - low) if l > 0.5 else d / (high + low)
+        s = d / (2.0 - high - low) if l > 0.5 else d / (high + low)
         h = {
-            r: (g - b) / d + (6 if g < b else 0),
-            g: (b - r) / d + 2,
-            b: (r - g) / d + 4,
+            r: (g - b) / d + (6.0 if g < b else 0.0),
+            g: (b - r) / d + 2.0,
+            b: (r - g) / d + 4.0,
         }[high]
-        h /= 6
+        h /= 6.0
 
-    return round(h * 360), round(s * 100), round(l * 100)
+    # Convert to degrees and normalize to 0-359 range
+    h_deg = h * 360.0
+    if h_deg >= 360.0:
+        h_deg = 0.0
+
+    return round(h_deg), round(s * 100.0), round(l * 100.0)
 
 
 def to_grb(rgb):
