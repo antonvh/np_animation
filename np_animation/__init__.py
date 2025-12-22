@@ -9,7 +9,7 @@ __version__ = "1.0.0"
 __author__ = "Anton Vanhoucke"
 __license__ = "MIT"
 
-from np_animation import (
+from .np_animation import (
     NPAnimation,
     hsl_to_rgb,
     rgb_to_hsl,
