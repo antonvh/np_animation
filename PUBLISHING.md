@@ -17,7 +17,7 @@ pip install --upgrade build twine
 2. Build the distribution packages:
 
 ```bash
-python -m build
+rm -rf dist/ && python -m build
 ```
 
 This will create both source distribution (`.tar.gz`) and wheel (`.whl`) files in the `dist/` directory.
