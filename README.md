@@ -7,11 +7,9 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![MicroPython](https://img.shields.io/badge/MicroPython-compatible-orange.svg)](https://micropython.org/)
 
-A MicroPython library for driving NeoPixel animations in a tight loop. It works like a mechanism, with time functions and keyframes, making it easy to create complex LED animations for robotics, wearables, and IoT projects.
+A MicroPython library for driving smooth NeoPixel animations in a tight loop. It works with time functions and keyframes, making it easy to create complex LED animations for robotics, wearables, and IoT projects. The timing is on the clock, independing of your tight loop speed. Perfect for robot lighting effects, indicator lights, and decorative patterns.
 
 </div>
-
-This library provides a powerful animation framework that separates animation logic from LED control, allowing you to create smooth, time-based animations with minimal overhead. Perfect for robot lighting effects, indicator lights, and decorative patterns.
 
 ## Table of Contents
 

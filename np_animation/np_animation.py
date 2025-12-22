@@ -307,7 +307,7 @@ def hue_shift(period=1000, offset=0):
 
     def func(time, **kwargs):
         hsl = (
-            (time % period) / period * 360,
+            ((time + offset) % period) / period * 360,
             100,  # Full saturation
             50,  # Half lightness
         )

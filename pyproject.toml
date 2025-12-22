@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "np_animation"
-version = "1.0.0"
+version = "1.1.0"
 description = "A MicroPython library for driving NeoPixel animations with time functions and keyframes"
 readme = "README.md"
 authors = [
