@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "np_animation"
+version = "1.0.0"
+description = "A MicroPython library for driving NeoPixel animations with time functions and keyframes"
+readme = "README.md"
+authors = [
+    {name = "Anton Vanhoucke", email = "anton@antonsmindstorms.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: Implementation :: MicroPython",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Hardware",
+]
+keywords = ["micropython", "neopixel", "led", "animation", "ws2812", "robotics", "lego"]
+requires-python = ">=3.5"
+
+[project.urls]
+Homepage = "https://github.com/antonvh/np_animation"
+Documentation = "https://github.com/antonvh/np_animation#readme"
+Repository = "https://github.com/antonvh/np_animation.git"
+Issues = "https://github.com/antonvh/np_animation/issues"
+
+[tool.setuptools]
+py-modules = ["np_animation"]
