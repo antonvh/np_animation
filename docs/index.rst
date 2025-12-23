@@ -9,11 +9,26 @@ Introduction
 Installation
 ------------
 
-Install using pip::
+Recommended: Using ViperIDE Package Manager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    pip install np_animation
+The easiest way to install ``np_animation`` on your MicroPython device:
 
-Or copy the ``np_animation`` package to your MicroPython device.
+1. Open `viperIDE.org <https://viperIDE.org>`_
+2. Navigate to **Tools > Package Manager**
+3. Select **Install package via link**
+4. Enter: ``github:antonvh/np_animation``
+
+LMS-ESP32
+~~~~~~~~~
+
+The package should be frozen in the latest firmeware build on https://firmware.antonsmindstorms.com.
+If not, use the ViperIDE Package Manager method above.
+
+Alternative Methods
+~~~~~~~~~~~~~~~~~~~
+
+Copy the ``np_animation.py`` file to your MicroPython device.
 
 Quick Start
 -----------

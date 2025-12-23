@@ -33,14 +33,22 @@ A MicroPython library for driving smooth NeoPixel animations in a tight loop. It
 - 🔄 **Keyframe Animation**: Support for complex keyframe-based animation sequences
 - 🎮 **Dynamic Control**: Pass runtime parameters to control animation behavior
 
-
 ## Installation
+
+### Recommended: Using ViperIDE Package Manager
+
+The easiest way to install `np_animation` on your MicroPython device:
+
+1. Open [viperIDE.org](https://viperIDE.org)
+2. Navigate to **Tools > Package Manager**
+3. Select **Install package via link**
+4. Enter: `github:antonvh/np_animation`
 
 ### On LMS-ESP32
 
-The module should be included in the latest MicroPython firmware from <https://www.antonsmindstorms.com>. If not, use ViperIDE or Thonny and create a new file called `np_animation.py`. Copy the contents from the same file in this repository inside.
+The module should be included in the latest MicroPython firmware from <https://www.antonsmindstorms.com>. If not, use ViperIDE as described above.
 
-### On MicroPython device using `micropip` from PyPI
+### Deprecated: using `micropip` from PyPI
 
 ```python
 import micropip

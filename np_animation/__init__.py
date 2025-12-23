@@ -5,8 +5,8 @@ This library provides a powerful animation framework for NeoPixel LEDs,
 with time-based functions and keyframes for creating complex lighting effects.
 """
 
-__version__ = "1.0.0"
-__author__ = "Anton Vanhoucke"
+__version__ = "1.1.0"
+__author__ = "Antons Mindstorms"
 __license__ = "MIT"
 
 from .np_animation import (
