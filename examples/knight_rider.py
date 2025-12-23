@@ -11,7 +11,7 @@ from time import sleep_ms
 funcs = [[[0, 1, 2, 3, 4, 5, 6, 7], knight_rider(period=2000, width=8, color=grb.RED)]]
 
 # Create animation instance
-npa = NPAnimation(funcs, pin=24, n_leds=8)
+npa = NPAnimation(funcs, pin=21)
 
 print("Knight Rider scanner effect. Press Ctrl+C to stop.")
 

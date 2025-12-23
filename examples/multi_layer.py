@@ -20,7 +20,7 @@ funcs = [
     [[11, 12], switch(on=grb.ORANGE, off=grb.OFF, name="indicators")],
 ]
 
-npa = NPAnimation(funcs, pin=24, n_leds=13)
+npa = NPAnimation(funcs, pin=21, n_leds=13)
 
 print("Multi-layer animation demo. Press Ctrl+C to stop.")
 print("Indicators will blink every 2 seconds")

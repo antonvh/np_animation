@@ -8,7 +8,8 @@ To run any example on your MicroPython device:
 
 1. Copy `np_animation.py` to your device
 2. Copy the example file to your device
-3. Run the example: `import example_name`
+3. Connect a NeoPixel (ws2812) led array to pin 21 (default for all examples)
+4. Run the example: `import example_name`
 
 Or use a tool like Thonny, ViperIDE, or ampy to run the scripts directly.
 

@@ -520,7 +520,7 @@ class NPAnimation:
         start_time (int): Internal timestamp for animation timing.
     """
 
-    def __init__(self, light_funcs, pin: int = 24, n_leds: int = 0):
+    def __init__(self, light_funcs, pin: int = 21, n_leds: int = 0):
         if n_leds == 0:
             n_leds = max([max(n[0]) for n in light_funcs]) + 1
         self.np = NeoPixel(Pin(pin), n_leds)

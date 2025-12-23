@@ -30,7 +30,7 @@ funcs = [
 ]
 
 # Create animation (assumes 12 LEDs on pin 24)
-npa = NPAnimation(funcs, pin=24, n_leds=12)
+npa = NPAnimation(funcs, pin=21, n_leds=12)
 
 print("Vehicle lighting demo. Press Ctrl+C to stop.")
 print(

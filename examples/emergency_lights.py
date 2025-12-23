@@ -8,6 +8,7 @@ from np_animation import NPAnimation, keyframes, grb
 from time import sleep_ms
 
 # Define emergency lights pattern
+# Each tuple is (time in ms, [list of LED colors])
 EMERGENCY = [
     (0, [grb.RED] * 3 + [grb.OFF] * 3),
     (150, [grb.OFF] * 6),
@@ -27,7 +28,8 @@ EMERGENCY = [
 # Create animation with keyframes
 funcs = [[[0, 1, 2, 3, 4, 5], keyframes(EMERGENCY)]]
 
-npa = NPAnimation(funcs, pin=24, n_leds=6)
+# Create animation instance (pin 21 is used for NeoPixel data, 6 LEDs)
+npa = NPAnimation(funcs, pin=21, n_leds=6)
 
 print("Emergency lights animation. Press Ctrl+C to stop.")
 
