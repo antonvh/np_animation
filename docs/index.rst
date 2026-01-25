@@ -15,7 +15,7 @@ Recommended: Using ViperIDE Package Manager
 
 The easiest way to install ``np_animation`` on your MicroPython device:
 
-1. Open `viperIDE.org <https://viperIDE.org>`_
+1. Open `viperIDE.org <https://viper-ide.org>`_
 2. Navigate to **Tools > Package Manager**
 3. Select **Install package via link**
 4. Enter: ``github:antonvh/np_animation``
