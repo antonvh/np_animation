@@ -1,5 +1,6 @@
-NeoPixel Animation Library Documentation
-=========================================
+==========================
+np_animation documentation
+==========================
 
 Introduction
 ------------
